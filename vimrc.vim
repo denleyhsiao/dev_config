@@ -15,6 +15,8 @@ Plug 'preservim/nerdtree'
   \ | Plug 'Xuyuanp/nerdtree-git-plugin'
   \ | Plug 'ryanoasis/vim-devicons'
   \ | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 "-------Settings for NERDTree--------
@@ -99,6 +101,10 @@ let g:NERDTreeExtensionHighlightColor['tex'] = s:yellow " sets the color of tex 
 let g:NERDTreeExtensionHighlightColor['c'] = s:green " sets the color of c files to blue
 let g:NERDTreeExtensionHighlightColor['pdf'] = s:beige " sets the color of pdf files to blue
 let g:NERDTreeExtensionHighlightColor['c++'] = s:green " sets the color of c++ files to blue
+
+"-------Settings for nerdcommenter ---
+" Add a space before comments
+let g:NERDSpaceDelims=1
 
 func SetFileTitle_shell()
   let infor = "#!/usr/bin/env bash\n"
