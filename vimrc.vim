@@ -17,6 +17,8 @@ Plug 'preservim/nerdtree'
   \ | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'scrooloose/nerdcommenter'
+
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 "-------Settings for NERDTree--------
@@ -105,6 +107,10 @@ let g:NERDTreeExtensionHighlightColor['c++'] = s:green " sets the color of c++ f
 "-------Settings for nerdcommenter ---
 " Add a space before comments
 let g:NERDSpaceDelims=1
+
+"-------Settings for the indentline ---
+let g:indentLine_char='|'
+let g:indentLine_enabled=1
 
 func SetFileTitle_shell()
   let infor = "#!/usr/bin/env bash\n"
