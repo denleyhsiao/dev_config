@@ -14,6 +14,7 @@ Plug 'liuchengxu/eleline.vim'
 Plug 'preservim/nerdtree'
   \ | Plug 'Xuyuanp/nerdtree-git-plugin'
   \ | Plug 'ryanoasis/vim-devicons'
+  \ | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
 "-------Settings for NERDTree--------
@@ -42,6 +43,62 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ 'Clean'     :'✔︎',
   \ 'Unknown'   :'?',
   \ }
+
+"-------Settings for nerdtree-syntax-highlight ---
+let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
+" not to show brackets around flags
+let g:webdevicons_conceal_nerdtree_brackets = 1
+" enable folder/directory glyph flag (disabled by default with 0)
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+" enable open and close folder/directory glyph flags (disabled by default with 0)
+let g:DevIconsEnableFoldersOpenClose = 1
+
+" use double-width(1) or single-width(0) glyphs
+" only manipulates padding, has no effect on terminal or set(guifont) font
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
+" Force extra padding in NERDTree so that the filetype icons line up vertically
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+
+"Highlight full name (not only icons). You need to add this if you don't have vim-devicons and want highlight.
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+
+"Highlight full name (not only icons). You need to add this if you don't have vim-devicons and want highlight.
+let g:NERDTreeHighlightFolders = 1
+
+"highlights the folder name
+let g:NERDTreeHighlightFoldersFullName = 1
+
+"you can add these colors to your .vimrc to help customizing
+let s:brown = "905532"
+let s:aqua =  "3AFFDB"
+let s:blue = "689FB6"
+let s:darkBlue = "44788E"
+let s:purple = "834F79"
+let s:lightPurple = "834F79"
+let s:red = "AE403F"
+let s:beige = "F5C06F"
+let s:yellow = "F09F17"
+let s:orange = "D4843E"
+let s:darkOrange = "F16529"
+let s:pink = "CB6F6F"
+let s:salmon = "EE6E73"
+let s:green = "8FAA54"
+let s:Turquoise = "40E0D0"
+let s:lightGreen = "31B53E"
+let s:white = "FFFFFF"
+let s:rspec_red = "FE405F"
+let s:git_orange = "F54D27"
+let s:gray = "808A87"
+
+let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
+let g:NERDTreeExtensionHighlightColor['py'] = s:orange " sets the color of py files to blue
+let g:NERDTreeExtensionHighlightColor['tex'] = s:yellow " sets the color of tex files to blue
+let g:NERDTreeExtensionHighlightColor['c'] = s:green " sets the color of c files to blue
+let g:NERDTreeExtensionHighlightColor['pdf'] = s:beige " sets the color of pdf files to blue
+let g:NERDTreeExtensionHighlightColor['c++'] = s:green " sets the color of c++ files to blue
 
 func SetFileTitle_shell()
   let infor = "#!/usr/bin/env bash\n"
