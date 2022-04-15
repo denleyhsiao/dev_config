@@ -5,6 +5,9 @@ let mapleader="\<space>"
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+call plug#begin('~/.vim/bundle')
+call plug#end()
+
 func SetFileTitle_shell()
   let infor = "#!/usr/bin/env bash\n"
     \."# \n"
