@@ -12,6 +12,7 @@ Plug 'liuchengxu/eleline.vim'
 " autocmd User FugitiveChanged if exists("b:eleline_branch") | unlet b:eleline_branch | endif
 
 Plug 'preservim/nerdtree'
+  \ | Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 "-------Settings for NERDTree--------
@@ -26,6 +27,20 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 let g:NERDTreeShowLineNumbers=1
+
+"-------Settings for NERDTree-git ---
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+  \ 'Modified'  :'✹',
+  \ 'Staged'    :'✚',
+  \ 'Untracked' :'✭',
+  \ 'Renamed'   :'➜',
+  \ 'Unmerged'  :'═',
+  \ 'Deleted'   :'✖',
+  \ 'Dirty'     :'✗',
+  \ 'Ignored'   :'☒',
+  \ 'Clean'     :'✔︎',
+  \ 'Unknown'   :'?',
+  \ }
 
 func SetFileTitle_shell()
   let infor = "#!/usr/bin/env bash\n"
