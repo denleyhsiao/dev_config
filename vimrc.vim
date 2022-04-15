@@ -10,7 +10,22 @@ call plug#begin('~/.vim/bundle')
 Plug 'liuchengxu/eleline.vim'
 " Optional. If you use vim-fugitive and want a callback from it to update eleline.
 " autocmd User FugitiveChanged if exists("b:eleline_branch") | unlet b:eleline_branch | endif
+
+Plug 'preservim/nerdtree'
 call plug#end()
+
+"-------Settings for NERDTree--------
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd vimenter * NERDTree
+"Close vim when the NERDTree is the only window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeIgnore=['\.pyc','\~$','\.swp']
+let g:NERDTreeShowLineNumbers=1
 
 func SetFileTitle_shell()
   let infor = "#!/usr/bin/env bash\n"
