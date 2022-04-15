@@ -13,6 +13,7 @@ Plug 'liuchengxu/eleline.vim'
 
 Plug 'preservim/nerdtree'
   \ | Plug 'Xuyuanp/nerdtree-git-plugin'
+  \ | Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "-------Settings for NERDTree--------
