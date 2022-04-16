@@ -1,6 +1,20 @@
 set nocompatible  " 不与Vi兼容（采用Vim自己的操作命令）
 set number
+set ruler
 set laststatus=2
+set showmode
+set showcmd
+set mouse=a
+set cursorline
+set encoding=utf-8
+set autoindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set softtabstop=2
+
+syntax on
+filetype plugin indent on
 
 let mapleader="\<space>"
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
