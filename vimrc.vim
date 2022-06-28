@@ -150,3 +150,16 @@ func SetFileTitle_python()
     silent  put! =infor
 endfunc
 autocmd bufnewfile *.py call SetFileTitle_python()
+
+func SetFileTitle_markdown()
+  let infor = "---\n"
+    \."layout: post\n"
+    \."title: \n"
+    \."date: ".strftime("%Y-%m-%d %H:%M")." \n"
+    \."categories:\n"
+    \."  - \n"
+    \."---\n"
+    \."\n"
+    silent put! = infor
+endfunc
+autocmd bufnewfile *.md call SetFileTitle_markdown()
