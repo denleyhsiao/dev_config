@@ -6,6 +6,7 @@ set showmode
 set showcmd
 set mouse=a
 set cursorline
+set colorcolumn=80
 set encoding=utf-8
 set autoindent
 set tabstop=2
