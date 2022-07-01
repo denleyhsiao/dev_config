@@ -112,11 +112,11 @@ let s:git_orange = "F54D27"
 let s:gray = "808A87"
 
 let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
-let g:NERDTreeExtensionHighlightColor['py'] = s:orange " sets the color of py files to blue
-let g:NERDTreeExtensionHighlightColor['tex'] = s:yellow " sets the color of tex files to blue
-let g:NERDTreeExtensionHighlightColor['c'] = s:green " sets the color of c files to blue
-let g:NERDTreeExtensionHighlightColor['pdf'] = s:beige " sets the color of pdf files to blue
-let g:NERDTreeExtensionHighlightColor['c++'] = s:green " sets the color of c++ files to blue
+let g:NERDTreeExtensionHighlightColor['py'] = s:orange " sets the color of py files to orange
+let g:NERDTreeExtensionHighlightColor['tex'] = s:yellow " sets the color of tex files to yellow
+let g:NERDTreeExtensionHighlightColor['c'] = s:green " sets the color of c files to green
+let g:NERDTreeExtensionHighlightColor['pdf'] = s:beige " sets the color of pdf files to beige
+let g:NERDTreeExtensionHighlightColor['c++'] = s:green " sets the color of c++ files to green
 
 "-------Settings for nerdcommenter ---
 " Add a space before comments
