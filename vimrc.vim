@@ -19,7 +19,7 @@ filetype plugin indent on
 
 let mapleader="\<space>"
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 call plug#begin('~/.vim/bundle')
 Plug 'liuchengxu/eleline.vim'
