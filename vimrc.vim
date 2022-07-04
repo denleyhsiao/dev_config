@@ -34,6 +34,8 @@ Plug 'preservim/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 
 Plug 'Yggdroot/indentLine'
+
+Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
 
 "-------Settings for NERDTree--------
@@ -125,6 +127,16 @@ let g:NERDSpaceDelims=1
 "-------Settings for the indentline ---
 let g:indentLine_char='|'
 let g:indentLine_enabled=1
+
+"-------Settings for the vim-cpp-enhanced-highlight ---
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_posix_standard = 1
+let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+let g:cpp_concepts_highlight = 1
+let g:cpp_no_function_highlight = 1
 
 func SetFileTitle_shell()
   let infor = "#!/usr/bin/env bash\n"
