@@ -36,6 +36,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 
 Plug 'octol/vim-cpp-enhanced-highlight'
+
+" Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
 "-------Settings for NERDTree--------
