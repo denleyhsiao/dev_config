@@ -69,7 +69,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
 " Close vim when the NERDTree is the only window
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeIgnore=['\.pyc','\~$','\.swp','\.dsp','\.dsw','\.mak','\.rc']
 let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeFileLines=1
@@ -229,7 +229,7 @@ func SetFileTitle_shell()
     \."\n"
     silent  put! =infor
 endfunc
-autocmd bufnewfile *.sh call SetFileTitle_shell()
+autocmd BufNewFile *.sh call SetFileTitle_shell()
 
 func SetFileTitle_python()
   let infor = "#!/usr/bin/env python\n"
@@ -242,7 +242,7 @@ func SetFileTitle_python()
     \."\n"
     silent  put! =infor
 endfunc
-autocmd bufnewfile *.py call SetFileTitle_python()
+autocmd BufNewFile *.py call SetFileTitle_python()
 
 func SetFileTitle_markdown()
   let infor = "---\n"
@@ -255,4 +255,4 @@ func SetFileTitle_markdown()
     \."\n"
     silent put! = infor
 endfunc
-autocmd bufnewfile *.md call SetFileTitle_markdown()
+autocmd BufNewFile *.md call SetFileTitle_markdown()
