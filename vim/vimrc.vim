@@ -1,30 +1,45 @@
-set nocompatible  " 不与Vi兼容（采用Vim自己的操作命令）
-set number
-set ruler
-set laststatus=2
-set showmode
-set showcmd
-set mouse=a
-set cursorline
-set colorcolumn=80
-set encoding=utf-8
-set autoindent
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set softtabstop=2
-set ignorecase
-set smartcase
-set hlsearch
-set showmatch
-
-syntax on
-filetype plugin indent on
-
 let g:mapleader="\<space>"
 let g:maplocalleader=","
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+
+noremap <leader>q :q<CR>
+
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <C-c>:w<CR> 
+
+nmap <F5> :CMakeTest<CR>
+nmap <F7> :CMakeBuild<CR>
+nmap <F9> :CMakeGenerate<CR>
+nmap <C-c> :CMakeClean<CR>
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel<CR>
+
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-o> :NERDTreeToggle<CR>
+nnoremap <C-i> :NERDTreeFind<CR>
+
+map <leader>tl :Tlist<CR>let Tlist_Ctags_Cmd='ctags'
+
+nmap <F10> <Plug>MarkdownPreview
+imap <F10> <Plug>MarkdownPreview
+nmap <F11> <Plug>StopMarkdownPreview
+imap <F11> <Plug>StopMarkdownPreview
+
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :WhichKey ','<CR>
+
+nnoremap <F12> :GotoHeader <CR>
+imap <F12> <Esc>:GotoHeader <CR>
+nnoremap gh :GotoHeaderSwitch <CR>
+
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+iabbrev @n   Denley Hsiao
+iabbrev @@   denley@justtodo.com 
 
 call plug#begin('~/.vim/bundle')
   Plug 'scrooloose/nerdcommenter'
@@ -54,15 +69,32 @@ call plug#begin('~/.vim/bundle')
   Plug 'romainl/vim-cool'
 call plug#end()
 
+set nocompatible 
+set number
+set ruler
+set laststatus=2
+set showmode
+set showcmd
+set mouse=a
+set cursorline
+set colorcolumn=80
+set encoding=utf-8
+set autoindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set softtabstop=2
+set ignorecase
+set smartcase
+set hlsearch
+set showmatch
+
+syntax on
+filetype plugin indent on
+
 "-------Settings for nerdcommenter ---
 " Add a space before comments
 let g:NERDSpaceDelims=1
-
-"------Settings for NERDTree--------
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-o> :NERDTreeToggle<CR>
-nnoremap <C-i> :NERDTreeFind<CR>
 
 " Start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
@@ -168,7 +200,6 @@ let Tlist_GainFocus_On_ToggleOpen =1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Process_File_Always=1
 let Tlist_Inc_Winwidth=0
-nmap <leader>tl :Tlist<CR>let Tlist_Ctags_Cmd='ctags'
 
 "-------Settings for vim-markdown ---------
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
@@ -185,28 +216,15 @@ let g:mkdp_auto_close = 1
 let g:mkdp_refresh_slow = 0
 let g:mkdp_command_for_global = 0
 
-" for normal mode
-nmap <silent> <F8> <Plug>MarkdownPreview
-" for insert mode
-imap <silent> <F8> <Plug>MarkdownPreview
-" for normal mode
-nmap <silent> <F9> <Plug>StopMarkdownPreview
-" for insert mode
-imap <silent> <F9> <Plug>StopMarkdownPreview
-
-"-------Setting for the vim-which-key -------
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-nnoremap <silent> <localleader> :WhichKey ','<CR>
-
 "-------Setting for the vim-Goto-Header -------
 let g:goto_header_includes_dirs = [".", "/usr/include", "..", "~"]
 let g:goto_header_search_flags = "-t f -s"
 let g:goto_header_excludes_dirs = []
 let g:goto_header_open_in_new_tab = 0
 let g:goto_header_use_shorter_path = 0
-nnoremap <F12> :GotoHeader <CR>
-imap <F12> <Esc>:GotoHeader <CR>
-nnoremap gh :GotoHeaderSwitch <CR>
+
+"-------Setting for the vim-cool----------
+let g:cool_total_matches = 1
 
 "-------Setting for the vim-cool ---------
 let g:cool_total_matches = 1
