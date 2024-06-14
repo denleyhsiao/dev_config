@@ -51,6 +51,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'tpope/vim-obsession'
   Plug 'cdelledonne/vim-cmake'
   Plug 'Yohannfra/Vim-Goto-Header'
+  Plug 'romainl/vim-cool'
 call plug#end()
 
 "-------Settings for nerdcommenter ---
@@ -213,6 +214,10 @@ let g:goto_header_use_shorter_path = 0
 nnoremap <F12> :GotoHeader <CR>
 imap <F12> <Esc>:GotoHeader <CR>
 nnoremap gh :GotoHeaderSwitch <CR>
+
+"-------Setting for the vim-cool ---------
+let g:cool_total_matches = 1
+set statusline+=%{get(g:,'cool_is_searching',0)?'Yep':''}
 
 func SetFileTitle_shell()
   let infor = "#!/usr/bin/env bash\n"
