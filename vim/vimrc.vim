@@ -178,19 +178,12 @@ let g:vimmarkdownmath=1
 let g:vimmarkdownfrontmatter=1
 
 " ------Settings for markdown-preview ---------
-" 设置启动chrome浏览器的命令
 let g:mkdp_path_to_chrome = "open -a Google\\ Chrome"
-" 设置为1则打开markdown文件时自动打开浏览器
 let g:mkdp_auto_start = 1
-" 设置为1则在编辑markdown的时候预览窗口是否打开，未开则自动打开
 let g:mkdp_auto_open = 1
-" 切换buffer时自动关闭预览窗口，设置为0则在切换buffer时不自动关闭
 let g:mkdp_auto_close = 1
-" 设置为1则只有在保存文件或退出插入模式时更新预览，默认为0，实时更新预览
 let g:mkdp_refresh_slow = 0
-" 设置为1则所有文件都使用MarkdownPreview进行预览，默认只有markdown文件可以
 let g:mkdp_command_for_global = 0
-let g:mkdp_path_to_chrome = "open -a Google\\ Chrome"
 
 " for normal mode
 nmap <silent> <F8> <Plug>MarkdownPreview
