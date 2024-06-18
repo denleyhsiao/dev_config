@@ -35,6 +35,8 @@ nnoremap <F12> :GotoHeader<CR>
 imap <F12> <Esc>:GotoHeader<CR>
 nnoremap gh :GotoHeaderSwitch<CR>
 
+nnoremap <C-p> :GFiles<CR>
+
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
@@ -67,6 +69,8 @@ call plug#begin('~/.vim/bundle')
   Plug 'cdelledonne/vim-cmake'
   Plug 'Yohannfra/Vim-Goto-Header'
   Plug 'romainl/vim-cool'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set nocompatible 
@@ -229,6 +233,8 @@ let g:cool_total_matches = 1
 "-------Setting for the vim-cool ---------
 let g:cool_total_matches = 1
 set statusline+=%{get(g:,'cool_is_searching',0)?'Yep':''}
+
+"-------Setting for the fzf -------------
 
 func SetFileTitle_shell()
   let infor = "#!/usr/bin/env bash\n"
