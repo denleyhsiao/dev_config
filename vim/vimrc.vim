@@ -71,6 +71,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'romainl/vim-cool'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  Plug 'airblade/vim-rooter'
 call plug#end()
 
 set nocompatible 
