@@ -31,9 +31,9 @@ imap <F11> <Plug>StopMarkdownPreview
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :WhichKey ','<CR>
 
-nnoremap <F12> :GotoHeader <CR>
-imap <F12> <Esc>:GotoHeader <CR>
-nnoremap gh :GotoHeaderSwitch <CR>
+nnoremap <F12> :GotoHeader<CR>
+imap <F12> <Esc>:GotoHeader<CR>
+nnoremap gh :GotoHeaderSwitch<CR>
 
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
