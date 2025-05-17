@@ -6,3 +6,6 @@
 
 ## vim
 * 执行`./vim/vimrc.sh`初始化VIM配置
+
+## docker
+* 执行`docker compose -f docker/docker-compose.yml up gitblit -d`启动gitblit

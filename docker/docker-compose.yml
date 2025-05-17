@@ -1,0 +1,19 @@
+services:
+  gitblit:
+    image: gitblit/gitblit
+    volumes:
+      - ~/gitblit-data:/var/opt/gitblit
+    expose:
+      - 8080
+      - 8443
+      - 9418
+      - 29418
+    ports:
+      - 8443:8443
+
+  shadowsocks:
+    image: oddrationale/docker-shadowsocks
+    command: "-s 0.0.0.0 -p 8079 -k 888888 -m aes-256-cfb"
+    restart: unless-stopped
+    ports:
+      - 8079:8079
