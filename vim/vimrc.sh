@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 WORK_PATH=$(cd $(dirname $0); pwd)
-CONFIG_FILE=$HOME/.vimrc
-PLUG_FILE=$HOME/.vim/autoload/plug.vim
+CONFIG_FILE=~/.vimrc
+PLUG_FILE=~/.vim/autoload/plug.vim
 
 [ ! -f ${PLUG_FILE} ] && curl -fLo ${PLUG_FILE} --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
