@@ -7,5 +7,8 @@
 ## vim
 * 执行`./vim/vimrc.sh`初始化VIM配置
 
+## tmux
+* 执行`./tmux/tmux.sh`初始化tmux配置
+
 ## docker
 * 执行`docker compose -f docker/docker-compose.yml up gitblit -d`启动gitblit
