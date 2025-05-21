@@ -10,5 +10,8 @@
 ## tmux
 * 执行`./tmux/tmux.sh`初始化tmux配置
 
+## zsh
+* 执行`./zsh/zshrc.sh`初始化zsh配置
+
 ## docker
 * 执行`docker compose -f docker/docker-compose.yml up gitblit -d`启动gitblit
