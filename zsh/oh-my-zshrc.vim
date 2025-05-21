@@ -121,3 +121,5 @@ source /home/linuxbrew/.linuxbrew/share/zsh-you-should-use/you-should-use.plugin
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 alias python=/home/linuxbrew/.linuxbrew/bin/python3
+alias ev='vim ~/.zshrc'
+alias sv='source ~/.zshrc'

@@ -2,6 +2,7 @@ let g:mapleader="\<space>"
 let g:maplocalleader=","
 
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 call plug#begin('~/.vim/bundle')

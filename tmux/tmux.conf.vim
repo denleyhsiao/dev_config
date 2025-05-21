@@ -2,6 +2,8 @@
 set -g prefix c-a
 unbind c-b
 bind c-a send-prefix
+bind e split-window 'vim ~/.tmux.conf' 
+bind s source-file ~/.tmux.conf
 
 ########## 插件 ##########
 set -g @plugin 'tmux-plugins/tpm'

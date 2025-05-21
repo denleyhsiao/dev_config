@@ -25,3 +25,6 @@ antigen bundle marlonrichert/zsh-autocomplete@main
 antigen bundle MichaelAquilina/zsh-you-should-use
 
 antigen apply
+
+alias ev='vim ~/.zshrc'
+alias sv='source ~/.zshrc'
