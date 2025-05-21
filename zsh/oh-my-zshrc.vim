@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=/home/linuxbrew/.linuxbrew/bin/:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,7 +118,6 @@ source /home/linuxbrew/.linuxbrew/share/zsh-autocomplete/zsh-autocomplete.plugin
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/linuxbrew/.linuxbrew/share/zsh-you-should-use/you-should-use.plugin.zsh
-[ -f /home/linuxbrew/.linuxbrew/etc/profile.d/autojump.sh ] && source /home/linuxbrew/.linuxbrew/etc/profile.d/autojump.sh
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 alias python=/home/linuxbrew/.linuxbrew/bin/python3
